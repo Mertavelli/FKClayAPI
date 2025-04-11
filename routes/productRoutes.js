@@ -38,7 +38,7 @@ router.get("/:id", async (req, res) => {
 const storage = multer.diskStorage({
     destination: "uploads/",
     filename: (req, file, cb) => {
-        cb(null, Date.now() + path.extname(file.originalname)); // Eindeutiger Dateiname
+        cb(null, Date.now() + path.extname(file.originalname));
     },
 });
 
